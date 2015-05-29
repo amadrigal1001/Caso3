@@ -1,0 +1,64 @@
+C:\Users\Andrés Madrigal\Documents\Visual Studio 2013\Projects\ACME\ACME\bin\ApplicationInsights.config
+C:\Users\Andrés Madrigal\Documents\Visual Studio 2013\Projects\ACME\ACME\bin\Microsoft.ApplicationInsights.Extensions.Intercept_x86.dll
+C:\Users\Andrés Madrigal\Documents\Visual Studio 2013\Projects\ACME\ACME\bin\Microsoft.ApplicationInsights.Extensions.Intercept_x64.dll
+C:\Users\Andrés Madrigal\Documents\Visual Studio 2013\Projects\ACME\ACME\bin\ACME.dll.config
+C:\Users\Andrés Madrigal\Documents\Visual Studio 2013\Projects\ACME\ACME\bin\ACME.dll
+C:\Users\Andrés Madrigal\Documents\Visual Studio 2013\Projects\ACME\ACME\bin\ACME.pdb
+C:\Users\Andrés Madrigal\Documents\Visual Studio 2013\Projects\ACME\ACME\bin\EntityFramework.dll
+C:\Users\Andrés Madrigal\Documents\Visual Studio 2013\Projects\ACME\ACME\bin\EntityFramework.SqlServer.dll
+C:\Users\Andrés Madrigal\Documents\Visual Studio 2013\Projects\ACME\ACME\bin\Microsoft.ApplicationInsights.dll
+C:\Users\Andrés Madrigal\Documents\Visual Studio 2013\Projects\ACME\ACME\bin\Microsoft.ApplicationInsights.Extensibility.PerfCollector.dll
+C:\Users\Andrés Madrigal\Documents\Visual Studio 2013\Projects\ACME\ACME\bin\Microsoft.ApplicationInsights.Extensibility.RuntimeTelemetry.dll
+C:\Users\Andrés Madrigal\Documents\Visual Studio 2013\Projects\ACME\ACME\bin\Microsoft.ApplicationInsights.Extensibility.Web.dll
+C:\Users\Andrés Madrigal\Documents\Visual Studio 2013\Projects\ACME\ACME\bin\Microsoft.ApplicationInsights.PersistenceChannel.dll
+C:\Users\Andrés Madrigal\Documents\Visual Studio 2013\Projects\ACME\ACME\bin\Microsoft.Diagnostics.Instrumentation.Extensions.Intercept.dll
+C:\Users\Andrés Madrigal\Documents\Visual Studio 2013\Projects\ACME\ACME\bin\Microsoft.Diagnostics.Tracing.EventSource.dll
+C:\Users\Andrés Madrigal\Documents\Visual Studio 2013\Projects\ACME\ACME\bin\Microsoft.Threading.Tasks.dll
+C:\Users\Andrés Madrigal\Documents\Visual Studio 2013\Projects\ACME\ACME\bin\Microsoft.Threading.Tasks.Extensions.Desktop.dll
+C:\Users\Andrés Madrigal\Documents\Visual Studio 2013\Projects\ACME\ACME\bin\Microsoft.Threading.Tasks.Extensions.dll
+C:\Users\Andrés Madrigal\Documents\Visual Studio 2013\Projects\ACME\ACME\bin\EntityFramework.xml
+C:\Users\Andrés Madrigal\Documents\Visual Studio 2013\Projects\ACME\ACME\bin\EntityFramework.SqlServer.xml
+C:\Users\Andrés Madrigal\Documents\Visual Studio 2013\Projects\ACME\ACME\bin\Microsoft.ApplicationInsights.xml
+C:\Users\Andrés Madrigal\Documents\Visual Studio 2013\Projects\ACME\ACME\bin\Microsoft.ApplicationInsights.Extensibility.RuntimeTelemetry.xml
+C:\Users\Andrés Madrigal\Documents\Visual Studio 2013\Projects\ACME\ACME\bin\Microsoft.ApplicationInsights.Extensibility.Web.xml
+C:\Users\Andrés Madrigal\Documents\Visual Studio 2013\Projects\ACME\ACME\bin\Microsoft.ApplicationInsights.PersistenceChannel.xml
+C:\Users\Andrés Madrigal\Documents\Visual Studio 2013\Projects\ACME\ACME\bin\Microsoft.Diagnostics.Tracing.EventSource.xml
+C:\Users\Andrés Madrigal\Documents\Visual Studio 2013\Projects\ACME\ACME\bin\Microsoft.Threading.Tasks.xml
+C:\Users\Andrés Madrigal\Documents\Visual Studio 2013\Projects\ACME\ACME\bin\Microsoft.Threading.Tasks.Extensions.xml
+C:\Users\Andrés Madrigal\Documents\Visual Studio 2013\Projects\ACME\ACME\bin\Microsoft.Threading.Tasks.Extensions.Desktop.xml
+C:\Users\Andrés Madrigal\Documents\Visual Studio 2013\Projects\ACME\ACME\obj\Debug\ACME.csprojResolveAssemblyReference.cache
+C:\Users\Andrés Madrigal\Documents\Visual Studio 2013\Projects\ACME\ACME\obj\Debug\ApplicationInsights.config
+C:\Users\Andrés Madrigal\Documents\Visual Studio 2013\Projects\ACME\ACME\obj\Debug\ACME.dll
+C:\Users\Andrés Madrigal\Documents\Visual Studio 2013\Projects\ACME\ACME\obj\Debug\ACME.pdb
+C:\Users\kenneth\Desktop\ACME\ACME\ACME\bin\ApplicationInsights.config
+C:\Users\kenneth\Desktop\ACME\ACME\ACME\bin\Microsoft.ApplicationInsights.Extensions.Intercept_x86.dll
+C:\Users\kenneth\Desktop\ACME\ACME\ACME\bin\Microsoft.ApplicationInsights.Extensions.Intercept_x64.dll
+C:\Users\kenneth\Desktop\ACME\ACME\ACME\bin\ACME.dll.config
+C:\Users\kenneth\Desktop\ACME\ACME\ACME\bin\ACME.dll
+C:\Users\kenneth\Desktop\ACME\ACME\ACME\bin\ACME.pdb
+C:\Users\kenneth\Desktop\ACME\ACME\ACME\bin\EntityFramework.dll
+C:\Users\kenneth\Desktop\ACME\ACME\ACME\bin\EntityFramework.SqlServer.dll
+C:\Users\kenneth\Desktop\ACME\ACME\ACME\bin\Microsoft.ApplicationInsights.dll
+C:\Users\kenneth\Desktop\ACME\ACME\ACME\bin\Microsoft.ApplicationInsights.Extensibility.PerfCollector.dll
+C:\Users\kenneth\Desktop\ACME\ACME\ACME\bin\Microsoft.ApplicationInsights.Extensibility.RuntimeTelemetry.dll
+C:\Users\kenneth\Desktop\ACME\ACME\ACME\bin\Microsoft.ApplicationInsights.Extensibility.Web.dll
+C:\Users\kenneth\Desktop\ACME\ACME\ACME\bin\Microsoft.ApplicationInsights.PersistenceChannel.dll
+C:\Users\kenneth\Desktop\ACME\ACME\ACME\bin\Microsoft.Diagnostics.Instrumentation.Extensions.Intercept.dll
+C:\Users\kenneth\Desktop\ACME\ACME\ACME\bin\Microsoft.Diagnostics.Tracing.EventSource.dll
+C:\Users\kenneth\Desktop\ACME\ACME\ACME\bin\Microsoft.Threading.Tasks.dll
+C:\Users\kenneth\Desktop\ACME\ACME\ACME\bin\Microsoft.Threading.Tasks.Extensions.Desktop.dll
+C:\Users\kenneth\Desktop\ACME\ACME\ACME\bin\Microsoft.Threading.Tasks.Extensions.dll
+C:\Users\kenneth\Desktop\ACME\ACME\ACME\bin\EntityFramework.xml
+C:\Users\kenneth\Desktop\ACME\ACME\ACME\bin\EntityFramework.SqlServer.xml
+C:\Users\kenneth\Desktop\ACME\ACME\ACME\bin\Microsoft.ApplicationInsights.xml
+C:\Users\kenneth\Desktop\ACME\ACME\ACME\bin\Microsoft.ApplicationInsights.Extensibility.RuntimeTelemetry.xml
+C:\Users\kenneth\Desktop\ACME\ACME\ACME\bin\Microsoft.ApplicationInsights.Extensibility.Web.xml
+C:\Users\kenneth\Desktop\ACME\ACME\ACME\bin\Microsoft.ApplicationInsights.PersistenceChannel.xml
+C:\Users\kenneth\Desktop\ACME\ACME\ACME\bin\Microsoft.Diagnostics.Tracing.EventSource.xml
+C:\Users\kenneth\Desktop\ACME\ACME\ACME\bin\Microsoft.Threading.Tasks.xml
+C:\Users\kenneth\Desktop\ACME\ACME\ACME\bin\Microsoft.Threading.Tasks.Extensions.xml
+C:\Users\kenneth\Desktop\ACME\ACME\ACME\bin\Microsoft.Threading.Tasks.Extensions.Desktop.xml
+C:\Users\kenneth\Desktop\ACME\ACME\ACME\obj\Debug\ACME.csprojResolveAssemblyReference.cache
+C:\Users\kenneth\Desktop\ACME\ACME\ACME\obj\Debug\ApplicationInsights.config
+C:\Users\kenneth\Desktop\ACME\ACME\ACME\obj\Debug\ACME.dll
+C:\Users\kenneth\Desktop\ACME\ACME\ACME\obj\Debug\ACME.pdb

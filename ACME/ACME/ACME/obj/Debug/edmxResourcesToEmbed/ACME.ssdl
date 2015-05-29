@@ -1,0 +1,209 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ACMEModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012.Azure" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="CALL_CENTER">
+    <Key>
+      <PropertyRef Name="ID_CALLCENTER" />
+    </Key>
+    <Property Name="ID_CALLCENTER" Type="int" Nullable="false" />
+    <Property Name="CODIGO_INTERNO" Type="varchar" MaxLength="15" Nullable="false" />
+    <Property Name="NOMBRE" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="REGION" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="PAIS" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="CODIGO_ZIP" Type="varchar" MaxLength="5" />
+  </EntityType>
+  <EntityType Name="CLIENTE">
+    <Key>
+      <PropertyRef Name="ID_CLIENTE" />
+    </Key>
+    <Property Name="ID_CLIENTE" Type="int" Nullable="false" />
+    <Property Name="NOMBRE" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="APELLIDO" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="CEDULA" Type="int" Nullable="false" />
+    <Property Name="GENERO" Type="varchar" MaxLength="1" Nullable="false" />
+    <Property Name="FECHA_DE_NACIMIENTO" Type="datetime" Nullable="false" />
+    <Property Name="DIRECCION" Type="varchar" MaxLength="100" />
+    <Property Name="NOMBREUSUARIO" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="TELEFONO" Type="int" />
+    <Property Name="ESTADO" Type="varchar" MaxLength="10" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'ACME.CASO2.CLIENTEXCUENTAXPRODUCTO' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="CLIENTEXCUENTAXPRODUCTO">
+    <Key>
+      <PropertyRef Name="ID_CLIENTE" />
+      <PropertyRef Name="ID_CUENTA" />
+      <PropertyRef Name="ID_PRODUCTO" />
+    </Key>
+    <Property Name="ID_CLIENTE" Type="int" Nullable="false" />
+    <Property Name="ID_CUENTA" Type="int" Nullable="false" />
+    <Property Name="ID_PRODUCTO" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="COMPRA">
+    <Key>
+      <PropertyRef Name="ID_COMPRA" />
+    </Key>
+    <Property Name="ID_COMPRA" Type="int" Nullable="false" />
+    <Property Name="ID_PRODUCTO" Type="int" Nullable="false" />
+    <Property Name="CANTIDAD" Type="int" Nullable="false" />
+    <Property Name="PRECIO_TOTAL" Type="int" Nullable="false" />
+    <Property Name="FECHA_COMPRA" Type="datetime" Nullable="false" />
+    <Property Name="DESCUENTO" Type="int" />
+    <Property Name="COSTO_TOTAL_ENVIO" Type="int" />
+    <Property Name="CARRIER" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'ACME.CASO2.COMPRAXCLIENTE' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="COMPRAXCLIENTE">
+    <Key>
+      <PropertyRef Name="ID_COMPRA" />
+      <PropertyRef Name="ID_CLIENTE" />
+    </Key>
+    <Property Name="ID_COMPRA" Type="int" Nullable="false" />
+    <Property Name="ID_CLIENTE" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CUENTA">
+    <Key>
+      <PropertyRef Name="ID_CUENTA" />
+    </Key>
+    <Property Name="ID_CUENTA" Type="int" Nullable="false" />
+    <Property Name="METODO_PAGO" Type="varchar" MaxLength="50" />
+    <Property Name="NOMBREUSUARIO" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="TIPO_CUENTA" Type="varchar" MaxLength="20" />
+    <Property Name="DIRECCIONENTREGA" Type="varchar" MaxLength="300" />
+  </EntityType>
+  <EntityType Name="EMPLEADO">
+    <Key>
+      <PropertyRef Name="ID_EMPLEADO" />
+    </Key>
+    <Property Name="ID_EMPLEADO" Type="int" Nullable="false" />
+    <Property Name="NOMBRE" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="APELLIDO" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="CEDULA" Type="int" Nullable="false" />
+    <Property Name="TELEFONO" Type="int" />
+    <Property Name="DIRECCION" Type="varchar" MaxLength="300" />
+    <Property Name="DEPARTAMENTO" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="CODIGO_INTERNO" Type="varchar" MaxLength="15" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'ACME.CASO2.EMPLEADOXCALLCENTER' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="EMPLEADOXCALLCENTER">
+    <Key>
+      <PropertyRef Name="ID_EMPLEADO" />
+      <PropertyRef Name="ID_CALLCENTER" />
+    </Key>
+    <Property Name="ID_EMPLEADO" Type="int" Nullable="false" />
+    <Property Name="ID_CALLCENTER" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="INVENTARIO">
+    <Key>
+      <PropertyRef Name="ID_INVENTARIO" />
+    </Key>
+    <Property Name="ID_INVENTARIO" Type="int" Nullable="false" />
+    <Property Name="ID_PRODUCTO" Type="int" Nullable="false" />
+    <Property Name="ID_PLANTA" Type="int" Nullable="false" />
+    <Property Name="CANTIDAD" Type="int" Nullable="false" />
+    <Property Name="FECHAINGRESO" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="LLAMADA">
+    <Key>
+      <PropertyRef Name="ID_LLAMADA" />
+    </Key>
+    <Property Name="ID_LLAMADA" Type="int" Nullable="false" />
+    <Property Name="ID_CLIENTE" Type="int" Nullable="false" />
+    <Property Name="ID_EMPLEADO" Type="int" Nullable="false" />
+    <Property Name="ID_PRODUCTO" Type="int" Nullable="false" />
+    <Property Name="ID_PROBLEMA" Type="int" Nullable="false" />
+    <Property Name="ID_SOLUCION" Type="int" Nullable="false" />
+    <Property Name="FECHA_LLAMADA" Type="datetime" Nullable="false" />
+    <Property Name="FOLLOW_UP" Type="smallint" Nullable="false" />
+    <Property Name="ESTADO_RESOLUCION_LLAMADA" Type="smallint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PLANTA">
+    <Key>
+      <PropertyRef Name="ID_PLANTA" />
+    </Key>
+    <Property Name="ID_PLANTA" Type="int" Nullable="false" />
+    <Property Name="NOMBRE" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="CODIGO_PLANTA" Type="varchar" MaxLength="15" Nullable="false" />
+    <Property Name="REGION" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="CODIGO_ZIP" Type="varchar" MaxLength="5" />
+    <Property Name="PAIS" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PROBLEMA">
+    <Key>
+      <PropertyRef Name="ID_PROBLEMA" />
+    </Key>
+    <Property Name="ID_PROBLEMA" Type="int" Nullable="false" />
+    <Property Name="DESCRIPCION" Type="varchar" MaxLength="300" Nullable="false" />
+    <Property Name="TIPO" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PRODUCTO">
+    <Key>
+      <PropertyRef Name="ID_PRODUCTO" />
+    </Key>
+    <Property Name="ID_PRODUCTO" Type="int" Nullable="false" />
+    <Property Name="NOMBRE" Type="varchar" MaxLength="80" Nullable="false" />
+    <Property Name="PRECIO_UNITARIO" Type="int" Nullable="false" />
+    <Property Name="CODIGO_PRODUCTO" Type="varchar" MaxLength="15" Nullable="false" />
+    <Property Name="COSTO_UNITARIO" Type="int" Nullable="false" />
+    <Property Name="DESCRIPCION" Type="varchar" MaxLength="300" />
+    <Property Name="ENVIO" Type="int" />
+  </EntityType>
+  <EntityType Name="SOLUCION">
+    <Key>
+      <PropertyRef Name="ID_SOLUCION" />
+    </Key>
+    <Property Name="ID_SOLUCION" Type="int" Nullable="false" />
+    <Property Name="DESCRIPCION" Type="varchar" MaxLength="300" Nullable="false" />
+  </EntityType>
+  <Function Name="GET_ID_CLIENTE" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="CASO2" />
+  <Function Name="GET_ID_EMPLEADO" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="CASO2" />
+  <Function Name="GET_ID_PROBLEMA" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="CASO2" />
+  <Function Name="GET_ID_PRODUCTO" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="CASO2" />
+  <Function Name="GET_ID_SOLUCION" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="CASO2" />
+  <Function Name="LLAMADA_DELETE" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="CASO2">
+    <Parameter Name="ID_LLAMADA" Type="int" Mode="In" />
+  </Function>
+  <Function Name="LLAMADA_UPDATE" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="CASO2">
+    <Parameter Name="ID_LLAMADA" Type="int" Mode="In" />
+    <Parameter Name="FECHA_LLAMADA" Type="datetime" Mode="In" />
+    <Parameter Name="FOLLOW_UP" Type="smallint" Mode="In" />
+    <Parameter Name="ESTADO_RESOLUCION_LLAMADA" Type="smallint" Mode="In" />
+  </Function>
+  <Function Name="LLAMADAGetById" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="CASO2">
+    <Parameter Name="IDLLAMADA" Type="int" Mode="In" />
+  </Function>
+  <Function Name="LLAMADASGETALL" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="CASO2" />
+  <EntityContainer Name="ACMEModelStoreContainer">
+    <EntitySet Name="CALL_CENTER" EntityType="Self.CALL_CENTER" Schema="CASO2" store:Type="Tables" />
+    <EntitySet Name="CLIENTE" EntityType="Self.CLIENTE" Schema="CASO2" store:Type="Tables" />
+    <EntitySet Name="COMPRA" EntityType="Self.COMPRA" Schema="CASO2" store:Type="Tables" />
+    <EntitySet Name="CUENTA" EntityType="Self.CUENTA" Schema="CASO2" store:Type="Tables" />
+    <EntitySet Name="EMPLEADO" EntityType="Self.EMPLEADO" Schema="CASO2" store:Type="Tables" />
+    <EntitySet Name="INVENTARIO" EntityType="Self.INVENTARIO" Schema="CASO2" store:Type="Tables" />
+    <EntitySet Name="LLAMADA" EntityType="Self.LLAMADA" Schema="CASO2" store:Type="Tables" />
+    <EntitySet Name="PLANTA" EntityType="Self.PLANTA" Schema="CASO2" store:Type="Tables" />
+    <EntitySet Name="PROBLEMA" EntityType="Self.PROBLEMA" Schema="CASO2" store:Type="Tables" />
+    <EntitySet Name="PRODUCTO" EntityType="Self.PRODUCTO" Schema="CASO2" store:Type="Tables" />
+    <EntitySet Name="SOLUCION" EntityType="Self.SOLUCION" Schema="CASO2" store:Type="Tables" />
+    <EntitySet Name="CLIENTEXCUENTAXPRODUCTO" EntityType="Self.CLIENTEXCUENTAXPRODUCTO" store:Type="Tables" store:Schema="CASO2">
+      <DefiningQuery>SELECT 
+    [CLIENTEXCUENTAXPRODUCTO].[ID_CLIENTE] AS [ID_CLIENTE], 
+    [CLIENTEXCUENTAXPRODUCTO].[ID_CUENTA] AS [ID_CUENTA], 
+    [CLIENTEXCUENTAXPRODUCTO].[ID_PRODUCTO] AS [ID_PRODUCTO]
+    FROM [CASO2].[CLIENTEXCUENTAXPRODUCTO] AS [CLIENTEXCUENTAXPRODUCTO]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="COMPRAXCLIENTE" EntityType="Self.COMPRAXCLIENTE" store:Type="Tables" store:Schema="CASO2">
+      <DefiningQuery>SELECT 
+    [COMPRAXCLIENTE].[ID_COMPRA] AS [ID_COMPRA], 
+    [COMPRAXCLIENTE].[ID_CLIENTE] AS [ID_CLIENTE]
+    FROM [CASO2].[COMPRAXCLIENTE] AS [COMPRAXCLIENTE]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="EMPLEADOXCALLCENTER" EntityType="Self.EMPLEADOXCALLCENTER" store:Type="Tables" store:Schema="CASO2">
+      <DefiningQuery>SELECT 
+    [EMPLEADOXCALLCENTER].[ID_EMPLEADO] AS [ID_EMPLEADO], 
+    [EMPLEADOXCALLCENTER].[ID_CALLCENTER] AS [ID_CALLCENTER]
+    FROM [CASO2].[EMPLEADOXCALLCENTER] AS [EMPLEADOXCALLCENTER]</DefiningQuery>
+    </EntitySet>
+  </EntityContainer>
+</Schema>

@@ -1,0 +1,271 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ACMEModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="LLAMADA">
+    <Key>
+      <PropertyRef Name="ID_LLAMADA" />
+    </Key>
+    <Property Name="ID_LLAMADA" Type="Int32" Nullable="false" />
+    <Property Name="ID_CLIENTE" Type="Int32" Nullable="false" />
+    <Property Name="ID_EMPLEADO" Type="Int32" Nullable="false" />
+    <Property Name="ID_PRODUCTO" Type="Int32" Nullable="false" />
+    <Property Name="ID_PROBLEMA" Type="Int32" Nullable="false" />
+    <Property Name="ID_SOLUCION" Type="Int32" Nullable="false" />
+    <Property Name="FECHA_LLAMADA" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="FOLLOW_UP" Type="Int16" Nullable="false" />
+    <Property Name="ESTADO_RESOLUCION_LLAMADA" Type="Int16" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="ACMEEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="LLAMADA" EntityType="Self.LLAMADA" />
+    <FunctionImport Name="LLAMADA_DELETE">
+      <Parameter Name="ID_LLAMADA" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="LLAMADA_UPDATE">
+      <Parameter Name="ID_LLAMADA" Mode="In" Type="Int32" />
+      <Parameter Name="FECHA_LLAMADA" Mode="In" Type="DateTime" />
+      <Parameter Name="FOLLOW_UP" Mode="In" Type="Int16" />
+      <Parameter Name="ESTADO_RESOLUCION_LLAMADA" Mode="In" Type="Int16" />
+    </FunctionImport>
+    <FunctionImport Name="LLAMADAGetById" ReturnType="Collection(ACMEModel.LLAMADAGetById_Result)">
+      <Parameter Name="IDLLAMADA" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="LLAMADASGETALL" ReturnType="Collection(ACMEModel.LLAMADASGETALL_Result)" />
+    <FunctionImport Name="LLAMADASinsert" ReturnType="Collection(Decimal)">
+      <Parameter Name="ID_Llamada" Mode="In" Type="Int32" />
+      <Parameter Name="Fecha_Llamada" Mode="In" Type="DateTime" />
+      <Parameter Name="Follow_UP" Mode="In" Type="Int16" />
+      <Parameter Name="Estado_Resolucion_Llamada" Mode="In" Type="Int16" />
+      <Parameter Name="ID_CLIENTE" Mode="In" Type="Int32" />
+      <Parameter Name="ID_EMPLEADO" Mode="In" Type="Int32" />
+      <Parameter Name="ID_PRODUCTO" Mode="In" Type="Int32" />
+      <Parameter Name="ID_PROBLEMA" Mode="In" Type="Int32" />
+      <Parameter Name="ID_SOLUCION" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <EntitySet Name="CALL_CENTER" EntityType="ACMEModel.CALL_CENTER" />
+    <EntitySet Name="CLIENTE" EntityType="ACMEModel.CLIENTE" />
+    <EntitySet Name="COMPRA" EntityType="ACMEModel.COMPRA" />
+    <EntitySet Name="CUENTA" EntityType="ACMEModel.CUENTA" />
+    <EntitySet Name="EMPLEADO" EntityType="ACMEModel.EMPLEADO" />
+    <EntitySet Name="INVENTARIO" EntityType="ACMEModel.INVENTARIO" />
+    <EntitySet Name="PLANTA" EntityType="ACMEModel.PLANTA" />
+    <EntitySet Name="PROBLEMA" EntityType="ACMEModel.PROBLEMA" />
+    <EntitySet Name="PRODUCTO" EntityType="ACMEModel.PRODUCTO" />
+    <EntitySet Name="SOLUCION" EntityType="ACMEModel.SOLUCION" />
+    <EntitySet Name="CLIENTEXCUENTAXPRODUCTO" EntityType="ACMEModel.CLIENTEXCUENTAXPRODUCTO" />
+    <EntitySet Name="COMPRAXCLIENTE" EntityType="ACMEModel.COMPRAXCLIENTE" />
+    <EntitySet Name="EMPLEADOXCALLCENTER" EntityType="ACMEModel.EMPLEADOXCALLCENTER" />
+    <FunctionImport Name="LLAMADASGETALL1" ReturnType="Collection(ACMEModel.LLAMADASGETALL1_Result1)" />
+  </EntityContainer>
+  <ComplexType Name="LLAMADAGetById_Result">
+    <Property Type="Int32" Name="ID_LLAMADA" Nullable="false" />
+    <Property Type="Int32" Name="ID_CLIENTE" Nullable="false" />
+    <Property Type="Int32" Name="ID_EMPLEADO" Nullable="false" />
+    <Property Type="Int32" Name="ID_PRODUCTO" Nullable="false" />
+    <Property Type="Int32" Name="ID_PROBLEMA" Nullable="false" />
+    <Property Type="Int32" Name="ID_SOLUCION" Nullable="false" />
+    <Property Type="DateTime" Name="FECHA_LLAMADA" Nullable="false" Precision="23" />
+    <Property Type="Int16" Name="FOLLOW_UP" Nullable="false" />
+    <Property Type="Int16" Name="ESTADO_RESOLUCION_LLAMADA" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="LLAMADASGETALL_Result">
+    <Property Type="Int32" Name="ID_LLAMADA" Nullable="false" />
+    <Property Type="Int32" Name="ID_CLIENTE" Nullable="false" />
+    <Property Type="Int32" Name="ID_EMPLEADO" Nullable="false" />
+    <Property Type="Int32" Name="ID_PRODUCTO" Nullable="false" />
+    <Property Type="Int32" Name="ID_PROBLEMA" Nullable="false" />
+    <Property Type="Int32" Name="ID_SOLUCION" Nullable="false" />
+    <Property Type="DateTime" Name="FECHA_LLAMADA" Nullable="false" Precision="23" />
+    <Property Type="Int16" Name="FOLLOW_UP" Nullable="false" />
+    <Property Type="Int16" Name="ESTADO_RESOLUCION_LLAMADA" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="LLAMADASGETALL2_Result">
+    <Property Type="Int32" Name="ID_LLAMADA" Nullable="false" />
+    <Property Type="Int32" Name="ID_CLIENTE" Nullable="false" />
+    <Property Type="Int32" Name="ID_EMPLEADO" Nullable="false" />
+    <Property Type="Int32" Name="ID_PRODUCTO" Nullable="false" />
+    <Property Type="Int32" Name="ID_PROBLEMA" Nullable="false" />
+    <Property Type="Int32" Name="ID_SOLUCION" Nullable="false" />
+    <Property Type="DateTime" Name="FECHA_LLAMADA" Nullable="false" Precision="23" />
+    <Property Type="Int16" Name="FOLLOW_UP" Nullable="false" />
+    <Property Type="Int16" Name="ESTADO_RESOLUCION_LLAMADA" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="LLAMADASGETALL1_Result">
+    <Property Type="Int32" Name="ID_LLAMADA" Nullable="false" />
+    <Property Type="Int32" Name="ID_CLIENTE" Nullable="false" />
+    <Property Type="Int32" Name="ID_EMPLEADO" Nullable="false" />
+    <Property Type="Int32" Name="ID_PRODUCTO" Nullable="false" />
+    <Property Type="Int32" Name="ID_PROBLEMA" Nullable="false" />
+    <Property Type="Int32" Name="ID_SOLUCION" Nullable="false" />
+    <Property Type="DateTime" Name="FECHA_LLAMADA" Nullable="false" Precision="23" />
+    <Property Type="Int16" Name="FOLLOW_UP" Nullable="false" />
+    <Property Type="Int16" Name="ESTADO_RESOLUCION_LLAMADA" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="LLAMADASGETALL2_Result1">
+    <Property Type="Int32" Name="ID_LLAMADA" Nullable="false" />
+    <Property Type="Int32" Name="ID_CLIENTE" Nullable="false" />
+    <Property Type="Int32" Name="ID_EMPLEADO" Nullable="false" />
+    <Property Type="Int32" Name="ID_PRODUCTO" Nullable="false" />
+    <Property Type="Int32" Name="ID_PROBLEMA" Nullable="false" />
+    <Property Type="Int32" Name="ID_SOLUCION" Nullable="false" />
+    <Property Type="DateTime" Name="FECHA_LLAMADA" Nullable="false" Precision="23" />
+    <Property Type="Int16" Name="FOLLOW_UP" Nullable="false" />
+    <Property Type="Int16" Name="ESTADO_RESOLUCION_LLAMADA" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="LLAMADASGETALL3_Result">
+    <Property Type="Int32" Name="ID_LLAMADA" Nullable="false" />
+    <Property Type="Int32" Name="ID_CLIENTE" Nullable="false" />
+    <Property Type="Int32" Name="ID_EMPLEADO" Nullable="false" />
+    <Property Type="Int32" Name="ID_PRODUCTO" Nullable="false" />
+    <Property Type="Int32" Name="ID_PROBLEMA" Nullable="false" />
+    <Property Type="Int32" Name="ID_SOLUCION" Nullable="false" />
+    <Property Type="DateTime" Name="FECHA_LLAMADA" Nullable="false" Precision="23" />
+    <Property Type="Int16" Name="FOLLOW_UP" Nullable="false" />
+    <Property Type="Int16" Name="ESTADO_RESOLUCION_LLAMADA" Nullable="false" />
+  </ComplexType>
+  <EntityType Name="CALL_CENTER">
+    <Key>
+      <PropertyRef Name="ID_CALLCENTER" />
+    </Key>
+    <Property Name="ID_CALLCENTER" Type="Int32" Nullable="false" />
+    <Property Name="CODIGO_INTERNO" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="NOMBRE" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="REGION" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="PAIS" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CODIGO_ZIP" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="CLIENTE">
+    <Key>
+      <PropertyRef Name="ID_CLIENTE" />
+    </Key>
+    <Property Name="ID_CLIENTE" Type="Int32" Nullable="false" />
+    <Property Name="NOMBRE" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="APELLIDO" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CEDULA" Type="Int32" Nullable="false" />
+    <Property Name="GENERO" Type="String" Nullable="false" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="FECHA_DE_NACIMIENTO" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="DIRECCION" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="NOMBREUSUARIO" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="TELEFONO" Type="Int32" />
+    <Property Name="ESTADO" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="COMPRA">
+    <Key>
+      <PropertyRef Name="ID_COMPRA" />
+    </Key>
+    <Property Name="ID_COMPRA" Type="Int32" Nullable="false" />
+    <Property Name="ID_PRODUCTO" Type="Int32" Nullable="false" />
+    <Property Name="CANTIDAD" Type="Int32" Nullable="false" />
+    <Property Name="PRECIO_TOTAL" Type="Int32" Nullable="false" />
+    <Property Name="FECHA_COMPRA" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="DESCUENTO" Type="Int32" />
+    <Property Name="COSTO_TOTAL_ENVIO" Type="Int32" />
+    <Property Name="CARRIER" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="CUENTA">
+    <Key>
+      <PropertyRef Name="ID_CUENTA" />
+    </Key>
+    <Property Name="ID_CUENTA" Type="Int32" Nullable="false" />
+    <Property Name="METODO_PAGO" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="NOMBREUSUARIO" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="TIPO_CUENTA" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="DIRECCIONENTREGA" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="EMPLEADO">
+    <Key>
+      <PropertyRef Name="ID_EMPLEADO" />
+    </Key>
+    <Property Name="ID_EMPLEADO" Type="Int32" Nullable="false" />
+    <Property Name="NOMBRE" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="APELLIDO" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CEDULA" Type="Int32" Nullable="false" />
+    <Property Name="TELEFONO" Type="Int32" />
+    <Property Name="DIRECCION" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+    <Property Name="DEPARTAMENTO" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="CODIGO_INTERNO" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="INVENTARIO">
+    <Key>
+      <PropertyRef Name="ID_INVENTARIO" />
+    </Key>
+    <Property Name="ID_INVENTARIO" Type="Int32" Nullable="false" />
+    <Property Name="ID_PRODUCTO" Type="Int32" Nullable="false" />
+    <Property Name="ID_PLANTA" Type="Int32" Nullable="false" />
+    <Property Name="CANTIDAD" Type="Int32" Nullable="false" />
+    <Property Name="FECHAINGRESO" Type="DateTime" Nullable="false" Precision="3" />
+  </EntityType>
+  <EntityType Name="PLANTA">
+    <Key>
+      <PropertyRef Name="ID_PLANTA" />
+    </Key>
+    <Property Name="ID_PLANTA" Type="Int32" Nullable="false" />
+    <Property Name="NOMBRE" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CODIGO_PLANTA" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="REGION" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CODIGO_ZIP" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="PAIS" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="PROBLEMA">
+    <Key>
+      <PropertyRef Name="ID_PROBLEMA" />
+    </Key>
+    <Property Name="ID_PROBLEMA" Type="Int32" Nullable="false" />
+    <Property Name="DESCRIPCION" Type="String" Nullable="false" MaxLength="300" FixedLength="false" Unicode="false" />
+    <Property Name="TIPO" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="PRODUCTO">
+    <Key>
+      <PropertyRef Name="ID_PRODUCTO" />
+    </Key>
+    <Property Name="ID_PRODUCTO" Type="Int32" Nullable="false" />
+    <Property Name="NOMBRE" Type="String" Nullable="false" MaxLength="80" FixedLength="false" Unicode="false" />
+    <Property Name="PRECIO_UNITARIO" Type="Int32" Nullable="false" />
+    <Property Name="CODIGO_PRODUCTO" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="COSTO_UNITARIO" Type="Int32" Nullable="false" />
+    <Property Name="DESCRIPCION" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+    <Property Name="ENVIO" Type="Int32" />
+  </EntityType>
+  <EntityType Name="SOLUCION">
+    <Key>
+      <PropertyRef Name="ID_SOLUCION" />
+    </Key>
+    <Property Name="ID_SOLUCION" Type="Int32" Nullable="false" />
+    <Property Name="DESCRIPCION" Type="String" Nullable="false" MaxLength="300" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="CLIENTEXCUENTAXPRODUCTO">
+    <Key>
+      <PropertyRef Name="ID_CLIENTE" />
+      <PropertyRef Name="ID_CUENTA" />
+      <PropertyRef Name="ID_PRODUCTO" />
+    </Key>
+    <Property Name="ID_CLIENTE" Type="Int32" Nullable="false" />
+    <Property Name="ID_CUENTA" Type="Int32" Nullable="false" />
+    <Property Name="ID_PRODUCTO" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="COMPRAXCLIENTE">
+    <Key>
+      <PropertyRef Name="ID_COMPRA" />
+      <PropertyRef Name="ID_CLIENTE" />
+    </Key>
+    <Property Name="ID_COMPRA" Type="Int32" Nullable="false" />
+    <Property Name="ID_CLIENTE" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="EMPLEADOXCALLCENTER">
+    <Key>
+      <PropertyRef Name="ID_EMPLEADO" />
+      <PropertyRef Name="ID_CALLCENTER" />
+    </Key>
+    <Property Name="ID_EMPLEADO" Type="Int32" Nullable="false" />
+    <Property Name="ID_CALLCENTER" Type="Int32" Nullable="false" />
+  </EntityType>
+  <ComplexType Name="LLAMADASGETALL1_Result1">
+    <Property Type="Int32" Name="ID_LLAMADA" Nullable="false" />
+    <Property Type="Int32" Name="ID_CLIENTE" Nullable="false" />
+    <Property Type="Int32" Name="ID_EMPLEADO" Nullable="false" />
+    <Property Type="Int32" Name="ID_PRODUCTO" Nullable="false" />
+    <Property Type="Int32" Name="ID_PROBLEMA" Nullable="false" />
+    <Property Type="Int32" Name="ID_SOLUCION" Nullable="false" />
+    <Property Type="DateTime" Name="FECHA_LLAMADA" Nullable="false" Precision="23" />
+    <Property Type="Int16" Name="FOLLOW_UP" Nullable="false" />
+    <Property Type="Int16" Name="ESTADO_RESOLUCION_LLAMADA" Nullable="false" />
+  </ComplexType>
+</Schema>

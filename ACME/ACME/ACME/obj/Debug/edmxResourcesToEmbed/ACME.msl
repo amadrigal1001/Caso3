@@ -1,0 +1,247 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ACMEModelStoreContainer" CdmEntityContainer="ACMEEntities">
+    <EntitySetMapping Name="LLAMADA">
+      <EntityTypeMapping TypeName="ACMEModel.LLAMADA">
+        <MappingFragment StoreEntitySet="LLAMADA">
+          <ScalarProperty Name="ID_LLAMADA" ColumnName="ID_LLAMADA" />
+          <ScalarProperty Name="ID_CLIENTE" ColumnName="ID_CLIENTE" />
+          <ScalarProperty Name="ID_EMPLEADO" ColumnName="ID_EMPLEADO" />
+          <ScalarProperty Name="ID_PRODUCTO" ColumnName="ID_PRODUCTO" />
+          <ScalarProperty Name="ID_PROBLEMA" ColumnName="ID_PROBLEMA" />
+          <ScalarProperty Name="ID_SOLUCION" ColumnName="ID_SOLUCION" />
+          <ScalarProperty Name="FECHA_LLAMADA" ColumnName="FECHA_LLAMADA" />
+          <ScalarProperty Name="FOLLOW_UP" ColumnName="FOLLOW_UP" />
+          <ScalarProperty Name="ESTADO_RESOLUCION_LLAMADA" ColumnName="ESTADO_RESOLUCION_LLAMADA" />
+        </MappingFragment>
+      </EntityTypeMapping>
+      <EntityTypeMapping TypeName="ACMEModel.LLAMADA">
+        <ModificationFunctionMapping>
+          <DeleteFunction FunctionName="ACMEModel.Store.LLAMADA_DELETE">
+            <ScalarProperty Name="ID_LLAMADA" ParameterName="ID_LLAMADA" />
+          </DeleteFunction>
+          <UpdateFunction FunctionName="ACMEModel.Store.LLAMADA_UPDATE">
+            <ScalarProperty Name="ESTADO_RESOLUCION_LLAMADA" ParameterName="ESTADO_RESOLUCION_LLAMADA" Version="Current" />
+            <ScalarProperty Name="FOLLOW_UP" ParameterName="FOLLOW_UP" Version="Current" />
+            <ScalarProperty Name="FECHA_LLAMADA" ParameterName="FECHA_LLAMADA" Version="Current" />
+            <ScalarProperty Name="ID_LLAMADA" ParameterName="ID_LLAMADA" Version="Current" />
+          </UpdateFunction>
+        </ModificationFunctionMapping>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="LLAMADA_DELETE" FunctionName="ACMEModel.Store.LLAMADA_DELETE" />
+    <FunctionImportMapping FunctionImportName="LLAMADA_UPDATE" FunctionName="ACMEModel.Store.LLAMADA_UPDATE" />
+    <FunctionImportMapping FunctionImportName="LLAMADAGetById" FunctionName="ACMEModel.Store.LLAMADAGetById">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ACMEModel.LLAMADAGetById_Result">
+          <ScalarProperty Name="ID_LLAMADA" ColumnName="ID_LLAMADA" />
+          <ScalarProperty Name="ID_CLIENTE" ColumnName="ID_CLIENTE" />
+          <ScalarProperty Name="ID_EMPLEADO" ColumnName="ID_EMPLEADO" />
+          <ScalarProperty Name="ID_PRODUCTO" ColumnName="ID_PRODUCTO" />
+          <ScalarProperty Name="ID_PROBLEMA" ColumnName="ID_PROBLEMA" />
+          <ScalarProperty Name="ID_SOLUCION" ColumnName="ID_SOLUCION" />
+          <ScalarProperty Name="FECHA_LLAMADA" ColumnName="FECHA_LLAMADA" />
+          <ScalarProperty Name="FOLLOW_UP" ColumnName="FOLLOW_UP" />
+          <ScalarProperty Name="ESTADO_RESOLUCION_LLAMADA" ColumnName="ESTADO_RESOLUCION_LLAMADA" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <EntitySetMapping Name="CALL_CENTER">
+      <EntityTypeMapping TypeName="ACMEModel.CALL_CENTER">
+        <MappingFragment StoreEntitySet="CALL_CENTER">
+          <ScalarProperty Name="CODIGO_ZIP" ColumnName="CODIGO_ZIP" />
+          <ScalarProperty Name="PAIS" ColumnName="PAIS" />
+          <ScalarProperty Name="REGION" ColumnName="REGION" />
+          <ScalarProperty Name="NOMBRE" ColumnName="NOMBRE" />
+          <ScalarProperty Name="CODIGO_INTERNO" ColumnName="CODIGO_INTERNO" />
+          <ScalarProperty Name="ID_CALLCENTER" ColumnName="ID_CALLCENTER" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CLIENTE">
+      <EntityTypeMapping TypeName="ACMEModel.CLIENTE">
+        <MappingFragment StoreEntitySet="CLIENTE">
+          <ScalarProperty Name="ESTADO" ColumnName="ESTADO" />
+          <ScalarProperty Name="TELEFONO" ColumnName="TELEFONO" />
+          <ScalarProperty Name="NOMBREUSUARIO" ColumnName="NOMBREUSUARIO" />
+          <ScalarProperty Name="DIRECCION" ColumnName="DIRECCION" />
+          <ScalarProperty Name="FECHA_DE_NACIMIENTO" ColumnName="FECHA_DE_NACIMIENTO" />
+          <ScalarProperty Name="GENERO" ColumnName="GENERO" />
+          <ScalarProperty Name="CEDULA" ColumnName="CEDULA" />
+          <ScalarProperty Name="APELLIDO" ColumnName="APELLIDO" />
+          <ScalarProperty Name="NOMBRE" ColumnName="NOMBRE" />
+          <ScalarProperty Name="ID_CLIENTE" ColumnName="ID_CLIENTE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="COMPRA">
+      <EntityTypeMapping TypeName="ACMEModel.COMPRA">
+        <MappingFragment StoreEntitySet="COMPRA">
+          <ScalarProperty Name="CARRIER" ColumnName="CARRIER" />
+          <ScalarProperty Name="COSTO_TOTAL_ENVIO" ColumnName="COSTO_TOTAL_ENVIO" />
+          <ScalarProperty Name="DESCUENTO" ColumnName="DESCUENTO" />
+          <ScalarProperty Name="FECHA_COMPRA" ColumnName="FECHA_COMPRA" />
+          <ScalarProperty Name="PRECIO_TOTAL" ColumnName="PRECIO_TOTAL" />
+          <ScalarProperty Name="CANTIDAD" ColumnName="CANTIDAD" />
+          <ScalarProperty Name="ID_PRODUCTO" ColumnName="ID_PRODUCTO" />
+          <ScalarProperty Name="ID_COMPRA" ColumnName="ID_COMPRA" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CUENTA">
+      <EntityTypeMapping TypeName="ACMEModel.CUENTA">
+        <MappingFragment StoreEntitySet="CUENTA">
+          <ScalarProperty Name="DIRECCIONENTREGA" ColumnName="DIRECCIONENTREGA" />
+          <ScalarProperty Name="TIPO_CUENTA" ColumnName="TIPO_CUENTA" />
+          <ScalarProperty Name="NOMBREUSUARIO" ColumnName="NOMBREUSUARIO" />
+          <ScalarProperty Name="METODO_PAGO" ColumnName="METODO_PAGO" />
+          <ScalarProperty Name="ID_CUENTA" ColumnName="ID_CUENTA" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EMPLEADO">
+      <EntityTypeMapping TypeName="ACMEModel.EMPLEADO">
+        <MappingFragment StoreEntitySet="EMPLEADO">
+          <ScalarProperty Name="CODIGO_INTERNO" ColumnName="CODIGO_INTERNO" />
+          <ScalarProperty Name="DEPARTAMENTO" ColumnName="DEPARTAMENTO" />
+          <ScalarProperty Name="DIRECCION" ColumnName="DIRECCION" />
+          <ScalarProperty Name="TELEFONO" ColumnName="TELEFONO" />
+          <ScalarProperty Name="CEDULA" ColumnName="CEDULA" />
+          <ScalarProperty Name="APELLIDO" ColumnName="APELLIDO" />
+          <ScalarProperty Name="NOMBRE" ColumnName="NOMBRE" />
+          <ScalarProperty Name="ID_EMPLEADO" ColumnName="ID_EMPLEADO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="INVENTARIO">
+      <EntityTypeMapping TypeName="ACMEModel.INVENTARIO">
+        <MappingFragment StoreEntitySet="INVENTARIO">
+          <ScalarProperty Name="FECHAINGRESO" ColumnName="FECHAINGRESO" />
+          <ScalarProperty Name="CANTIDAD" ColumnName="CANTIDAD" />
+          <ScalarProperty Name="ID_PLANTA" ColumnName="ID_PLANTA" />
+          <ScalarProperty Name="ID_PRODUCTO" ColumnName="ID_PRODUCTO" />
+          <ScalarProperty Name="ID_INVENTARIO" ColumnName="ID_INVENTARIO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PLANTA">
+      <EntityTypeMapping TypeName="ACMEModel.PLANTA">
+        <MappingFragment StoreEntitySet="PLANTA">
+          <ScalarProperty Name="PAIS" ColumnName="PAIS" />
+          <ScalarProperty Name="CODIGO_ZIP" ColumnName="CODIGO_ZIP" />
+          <ScalarProperty Name="REGION" ColumnName="REGION" />
+          <ScalarProperty Name="CODIGO_PLANTA" ColumnName="CODIGO_PLANTA" />
+          <ScalarProperty Name="NOMBRE" ColumnName="NOMBRE" />
+          <ScalarProperty Name="ID_PLANTA" ColumnName="ID_PLANTA" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PROBLEMA">
+      <EntityTypeMapping TypeName="ACMEModel.PROBLEMA">
+        <MappingFragment StoreEntitySet="PROBLEMA">
+          <ScalarProperty Name="TIPO" ColumnName="TIPO" />
+          <ScalarProperty Name="DESCRIPCION" ColumnName="DESCRIPCION" />
+          <ScalarProperty Name="ID_PROBLEMA" ColumnName="ID_PROBLEMA" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PRODUCTO">
+      <EntityTypeMapping TypeName="ACMEModel.PRODUCTO">
+        <MappingFragment StoreEntitySet="PRODUCTO">
+          <ScalarProperty Name="ENVIO" ColumnName="ENVIO" />
+          <ScalarProperty Name="DESCRIPCION" ColumnName="DESCRIPCION" />
+          <ScalarProperty Name="COSTO_UNITARIO" ColumnName="COSTO_UNITARIO" />
+          <ScalarProperty Name="CODIGO_PRODUCTO" ColumnName="CODIGO_PRODUCTO" />
+          <ScalarProperty Name="PRECIO_UNITARIO" ColumnName="PRECIO_UNITARIO" />
+          <ScalarProperty Name="NOMBRE" ColumnName="NOMBRE" />
+          <ScalarProperty Name="ID_PRODUCTO" ColumnName="ID_PRODUCTO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SOLUCION">
+      <EntityTypeMapping TypeName="ACMEModel.SOLUCION">
+        <MappingFragment StoreEntitySet="SOLUCION">
+          <ScalarProperty Name="DESCRIPCION" ColumnName="DESCRIPCION" />
+          <ScalarProperty Name="ID_SOLUCION" ColumnName="ID_SOLUCION" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CLIENTEXCUENTAXPRODUCTO">
+      <EntityTypeMapping TypeName="ACMEModel.CLIENTEXCUENTAXPRODUCTO">
+        <MappingFragment StoreEntitySet="CLIENTEXCUENTAXPRODUCTO">
+          <ScalarProperty Name="ID_PRODUCTO" ColumnName="ID_PRODUCTO" />
+          <ScalarProperty Name="ID_CUENTA" ColumnName="ID_CUENTA" />
+          <ScalarProperty Name="ID_CLIENTE" ColumnName="ID_CLIENTE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="COMPRAXCLIENTE">
+      <EntityTypeMapping TypeName="ACMEModel.COMPRAXCLIENTE">
+        <MappingFragment StoreEntitySet="COMPRAXCLIENTE">
+          <ScalarProperty Name="ID_CLIENTE" ColumnName="ID_CLIENTE" />
+          <ScalarProperty Name="ID_COMPRA" ColumnName="ID_COMPRA" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EMPLEADOXCALLCENTER">
+      <EntityTypeMapping TypeName="ACMEModel.EMPLEADOXCALLCENTER">
+        <MappingFragment StoreEntitySet="EMPLEADOXCALLCENTER">
+          <ScalarProperty Name="ID_CALLCENTER" ColumnName="ID_CALLCENTER" />
+          <ScalarProperty Name="ID_EMPLEADO" ColumnName="ID_EMPLEADO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="LLAMADASGETALL1" FunctionName="ACMEModel.Store.LLAMADASGETALL">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ACMEModel.LLAMADASGETALL1_Result1">
+          <ScalarProperty Name="ID_LLAMADA" ColumnName="ID_LLAMADA" />
+          <ScalarProperty Name="ID_CLIENTE" ColumnName="ID_CLIENTE" />
+          <ScalarProperty Name="ID_EMPLEADO" ColumnName="ID_EMPLEADO" />
+          <ScalarProperty Name="ID_PRODUCTO" ColumnName="ID_PRODUCTO" />
+          <ScalarProperty Name="ID_PROBLEMA" ColumnName="ID_PROBLEMA" />
+          <ScalarProperty Name="ID_SOLUCION" ColumnName="ID_SOLUCION" />
+          <ScalarProperty Name="FECHA_LLAMADA" ColumnName="FECHA_LLAMADA" />
+          <ScalarProperty Name="FOLLOW_UP" ColumnName="FOLLOW_UP" />
+          <ScalarProperty Name="ESTADO_RESOLUCION_LLAMADA" ColumnName="ESTADO_RESOLUCION_LLAMADA" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GET_ID_CLIENTE" FunctionName="ACMEModel.Store.GET_ID_CLIENTE" />
+    <FunctionImportMapping FunctionImportName="GET_ID_CLIENTE1" FunctionName="ACMEModel.Store.GET_ID_CLIENTE">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ACMEModel.GET_ID_CLIENTE1_Result">
+          <ScalarProperty Name="ID_CLIENTE" ColumnName="ID_CLIENTE" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GET_ID_EMPLEADO" FunctionName="ACMEModel.Store.GET_ID_EMPLEADO" />
+    <FunctionImportMapping FunctionImportName="GET_ID_PROBLEMA" FunctionName="ACMEModel.Store.GET_ID_PROBLEMA">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ACMEModel.GET_ID_PROBLEMA_Result">
+          <ScalarProperty Name="ID_PROBLEMA" ColumnName="ID_PROBLEMA" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GET_ID_PRODUCTO" FunctionName="ACMEModel.Store.GET_ID_PRODUCTO">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ACMEModel.GET_ID_PRODUCTO_Result">
+          <ScalarProperty Name="ID_PRODUCTO" ColumnName="ID_PRODUCTO" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GET_ID_SOLUCION" FunctionName="ACMEModel.Store.GET_ID_SOLUCION">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ACMEModel.GET_ID_SOLUCION_Result">
+          <ScalarProperty Name="ID_SOLUCION" ColumnName="ID_SOLUCION" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GET_ID_EMPLEADO1" FunctionName="ACMEModel.Store.GET_ID_EMPLEADO">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ACMEModel.GET_ID_EMPLEADO1_Result">
+          <ScalarProperty Name="ID_EMPLEADO" ColumnName="ID_EMPLEADO" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+  </EntityContainerMapping>
+</Mapping>
